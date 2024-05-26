@@ -1,6 +1,6 @@
 package org.underlab.conditions;
 
-import com.codeborne.selenide.WebDriverConditions;
+
 import com.codeborne.selenide.conditions.webdriver.UrlCondition;
 
 public class UrlEndsWith extends UrlCondition {

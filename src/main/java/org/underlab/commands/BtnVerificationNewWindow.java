@@ -6,8 +6,6 @@ import com.codeborne.selenide.impl.WebElementSource;
 
 import javax.annotation.Nullable;
 
-import static com.codeborne.selenide.Condition.clickable;
-import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
 public class BtnVerificationNewWindow implements Command {
