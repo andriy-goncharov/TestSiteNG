@@ -104,10 +104,7 @@ public class BasePage {
     public SelenideElement btnBackTop = $(".back-to-top-text");
 
 
-/*
-    TODO:
-    check and repair footerTutorials
-*/
+
 
 
     public void HomeEN() {
