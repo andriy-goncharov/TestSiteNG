@@ -6,48 +6,9 @@ import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.open;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.underlab.Constants.ConstantsLinks.*;
 
 public class HomePageTest extends BaseTest {
-
-public static final String NAME_ROOM = "meeting";
-public static final String NAME_PAGE_PANEL = "dashboard";
-public static final String NAME_PAGE_FEATURES = "powerful features";
-public static final String NAME_BLOG_START_PAGE = "webinars, web conferencing";
-public static final String NAME_BLOG_CLASSROOM = "online education for students";
-public static final String NAME_BLOG_MEETING = "online meetings";
-public static final String NAME_BLOG_WEBINAR_FEEDBACK = "webinar feedback";
-public static final String NAME_PAGE_CONTACT = "contact us";
-public static final String NAME_PAGE_PRICING = "try free";
-public static final String NAME_PAGE_SITEMAP = "sitemap";
-
-
-///////////////////////
-public static final String NAME_PAGE_AUTOWEB = "automated webinars";
-public static final String NAME_PAGE_POLLS_SURVEYS = "polls and surveys";
-public static final String NAME_PAGE_WEBINAR_ROOM = "webinar room";
-public static final String NAME_PAGE_SECURE_TECH = "tcp-based secure broadcasting";
-public static final String NAME_PAGE_LIVE_WEB = "live webinars";
-public static final String NAME_PAGE_WHAT_IS_WEB = "what is a webinar";
-public static final String NAME_PAGE_SHARING = "secure screen sharing";
-public static final String NAME_PAGE_BRANDING = "webinar branding";
-public static final String NAME_PAGE_VIDEO_CONF = "video conferencing ";
-public static final String NAME_PAGE_REC = "webinar recording ";
-public static final String NAME_PAGE_ANALYTICS = "webinar analytics";
-public static final String NAME_PAGE_CTA = "increase sales at webinars";
-public static final String NAME_PAGE_SUPPORT = "videos | help desk";
-public static final String NAME_PAGE_AGREEMENTS = "user agreements";
-public static final String NAME_PAGE_PRIVACY = "privacy policy";
-public static final String NAME_PAGE_REFUND  = "refund policy";
-
-public static final String NAME_PAGE_FAQ = "faq — frequently asked questions and technical issues";
-public static final String NAME_PAGE_GLOSSARY = "glossary";
-public static final String NAME_PAGE_WRITE_US = "write for us";
-public static final String NAME_PODUCT = "myownconference";
-;
-
-
-
-
     @BeforeClass
     public void startPage() {
         open("/");
@@ -63,6 +24,7 @@ public static final String NAME_PODUCT = "myownconference";
 
 
     }
+
     @Test
     public void testBlockPosts1() {
         assertThat(HomePage.getInstance().testBtnAllPosts()).contains(NAME_BLOG_START_PAGE);
@@ -73,13 +35,10 @@ public static final String NAME_PODUCT = "myownconference";
         assertThat(HomePage.getInstance().testBtnContact()).contains(NAME_PAGE_CONTACT);
         assertThat(HomePage.getInstance().testGetStartedNow()).contains(NAME_PAGE_PANEL);
     }
-    /*
-    todo
-    check method testBtnAllPosts
-    */
+
 
     @Test
-    public void testMenu(){
+    public void testMenu() {
         assertThat(HomePage.getInstance().selectAutomatedWebinars()).contains(NAME_PAGE_AUTOWEB);
         assertThat(HomePage.getInstance().selectPollsAndSurveys()).contains(NAME_PAGE_POLLS_SURVEYS);
         assertThat(HomePage.getInstance().selectWebinarRoom()).contains(NAME_PAGE_WEBINAR_ROOM);
@@ -99,7 +58,7 @@ public static final String NAME_PODUCT = "myownconference";
     }
 
     @Test
-    public void testMenuResources(){
+    public void testMenuResources() {
         assertThat(HomePage.getInstance().selectFAQ()).contains(NAME_PAGE_FAQ);
         assertThat(HomePage.getInstance().selectGlossary()).contains(NAME_PAGE_GLOSSARY);
 //        HomePage.getInstance().selectHelpCenter(); // не под нами
@@ -114,14 +73,16 @@ public static final String NAME_PODUCT = "myownconference";
 
 
     }
+
     @Test
-    public void testMenuFeaturesPricing(){
+    public void testMenuFeaturesPricing() {
         assertThat(HomePage.getInstance().selectFeatures()).contains(NAME_PAGE_FEATURES);
         assertThat(HomePage.getInstance().selectPricing()).contains(NAME_PAGE_PRICING);
 
     }
+
     @Test
-    public void myTest(){
+    public void myTestFooter() {
 
         assertThat(HomePage.getInstance().checkFooterGuestWrite()).contains(NAME_PAGE_WRITE_US);
         assertThat(HomePage.getInstance().checkFooterContact()).contains(NAME_PAGE_CONTACT);

@@ -2,8 +2,8 @@ package Page;
 
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
-import org.underlab.commands.BtnVerificationCurrentWindow;
-import org.underlab.commands.BtnVerificationNewWindow;
+import org.underlab.commands.BtnProductVerificationCurrentWindow;
+import org.underlab.commands.BtnProductVerificationNewWindow;
 import org.underlab.conditions.MyCustomConditions;
 
 import static com.codeborne.selenide.Condition.*;
@@ -98,8 +98,8 @@ public class BasePage {
     private SelenideElement footAgreements = $x("//div[@class='footer-link-div']/a[@href='./user-agreements/']");
     private SelenideElement footPrivacy = $x("//div[@class='footer-link-div']/a[@href='./privacy-policy/']");
     private SelenideElement footRefund = $x("//div[@class='footer-link-div']/a[@href='./refund-policy/']");
-    private SelenideElement footRegister = $x("//div[@class='footer-link-div-register']/a[contains(@href,'mywebinar.com/en/signup')]");
-    private SelenideElement footLogin = $x("//div[@class='footer-link-div']/a[contains(@href,'cp.mywebinar.com/en')]");
+    private SelenideElement footRegister = $x("//div[@class='footer-link-div-register']/a[contains(@href,'app.myownconference.com/en/signup')]");
+    private SelenideElement footLogin = $x("//div[@class='footer-link-div']/a[contains(@href,'app.myownconference.com/en')]");
 
     public SelenideElement btnBackTop = $(".back-to-top-text");
 
@@ -116,119 +116,119 @@ public class BasePage {
         menuProducts.should(visible).should(clickable);
         actions().moveToElement(menuProducts).perform();
         icoAutomatedWebinars.shouldBe(visible).shouldBe(clickable).shouldBe(image);
-        return icoAutomatedWebinars.parent().execute(new BtnVerificationCurrentWindow()).toString();
+        return icoAutomatedWebinars.parent().execute(new BtnProductVerificationCurrentWindow()).toString();
     }
 
     public String selectPollsAndSurveys() {
         menuProducts.should(visible).should(clickable);
         actions().moveToElement(menuProducts).perform();
         icoPollsAndSurveys.shouldBe(visible).shouldBe(clickable).shouldBe(image);
-        return icoPollsAndSurveys.parent().execute(new BtnVerificationCurrentWindow()).toString();
+        return icoPollsAndSurveys.parent().execute(new BtnProductVerificationCurrentWindow()).toString();
     }
 
     public String selectWebinarRoom() {
         menuProducts.should(visible).should(clickable);
         actions().moveToElement(menuProducts).perform();
         icoWebRoom.should(visible).should(clickable).shouldBe(image);
-        return icoWebRoom.parent().execute(new BtnVerificationCurrentWindow()).toString();
+        return icoWebRoom.parent().execute(new BtnProductVerificationCurrentWindow()).toString();
     }
 
     public String selectSecureBroadcasting() {
         menuProducts.should(visible).should(clickable);
         actions().moveToElement(menuProducts).perform();
         icoBroadcasting.shouldBe(visible).shouldBe(clickable).shouldBe(image);
-        return icoBroadcasting.parent().execute(new BtnVerificationNewWindow()).toString();
+        return icoBroadcasting.parent().execute(new BtnProductVerificationNewWindow()).toString();
     }
 
     public String selectLiveWebinars() {
         menuProducts.should(visible).should(clickable);
         actions().moveToElement(menuProducts).perform();
         icoLiveWeb.should(visible).should(clickable).shouldBe(image);
-        return icoLiveWeb.parent().execute(new BtnVerificationCurrentWindow()).toString();
+        return icoLiveWeb.parent().execute(new BtnProductVerificationCurrentWindow()).toString();
     }
 
     public String selectScreenSharing() {
         menuProducts.should(visible).should(clickable);
         actions().moveToElement(menuProducts).perform();
         icoSharing.should(visible).should(clickable).shouldBe(image);
-        return icoSharing.parent().execute(new BtnVerificationCurrentWindow()).toString();
+        return icoSharing.parent().execute(new BtnProductVerificationCurrentWindow()).toString();
     }
 
     public String selectwebinarBranding() {
         menuProducts.should(visible).should(clickable);
         actions().moveToElement(menuProducts).perform();
         icoBranding.should(visible).should(clickable).shouldBe(image);
-        return icoBranding.parent().execute(new BtnVerificationCurrentWindow()).toString();
+        return icoBranding.parent().execute(new BtnProductVerificationCurrentWindow()).toString();
     }
 
     public String selectDiscoverWeb() {
         menuProducts.should(visible).should(clickable);
         actions().moveToElement(menuProducts).perform();
         icoDiscoverWeb.should(visible).should(clickable).shouldBe(image);
-        return icoDiscoverWeb.parent().execute(new BtnVerificationCurrentWindow()).toString();
+        return icoDiscoverWeb.parent().execute(new BtnProductVerificationCurrentWindow()).toString();
     }
 
     public String selectVideoConferencing() {
         menuProducts.should(visible).should(clickable);
         actions().moveToElement(menuProducts).perform();
         icoVideconf.should(visible).should(clickable).shouldBe(image);
-        return icoVideconf.parent().execute(new BtnVerificationCurrentWindow()).toString();
+        return icoVideconf.parent().execute(new BtnProductVerificationCurrentWindow()).toString();
     }
 
     public String selectWebinarRecording() {
         menuProducts.should(visible).should(clickable);
         actions().moveToElement(menuProducts).perform();
         icoRecording.should(visible).should(clickable).shouldBe(image);
-        return icoRecording.parent().execute(new BtnVerificationCurrentWindow()).toString();
+        return icoRecording.parent().execute(new BtnProductVerificationCurrentWindow()).toString();
     }
 
     public String selectWebinarAnalytics() {
         menuProducts.should(visible).should(clickable);
         actions().moveToElement(menuProducts).perform();
         icoAnalitics.should(visible).should(clickable).shouldBe(image);
-        return icoAnalitics.parent().execute(new BtnVerificationCurrentWindow()).toString();
+        return icoAnalitics.parent().execute(new BtnProductVerificationCurrentWindow()).toString();
     }
 
     public String selectCTA() {
         menuProducts.should(visible).should(clickable);
         actions().moveToElement(menuProducts).perform();
         icoCTA.should(visible).should(clickable).shouldBe(image);
-        return icoCTA.parent().execute(new BtnVerificationNewWindow()).toString();
+        return icoCTA.parent().execute(new BtnProductVerificationNewWindow()).toString();
     }
 
     public String selectBrowseOurBlog() {
         menuProducts.should(visible).should(clickable);
         actions().moveToElement(menuProducts).perform();
         imgBrowseOurBlog.should(visible).should(clickable).shouldBe(image);
-        return browseOurBlog.execute(new BtnVerificationNewWindow()).toString();
+        return browseOurBlog.execute(new BtnProductVerificationNewWindow()).toString();
     }
 
     public String selectJoinInMenuProduct() {
         menuProducts.should(visible).should(clickable);
         actions().moveToElement(menuProducts).perform();
         linkSignForFreeMenuProduct.should(visible).should(clickable);
-        return linkSignForFreeMenuProduct.execute(new BtnVerificationCurrentWindow()).toString();
+        return linkSignForFreeMenuProduct.execute(new BtnProductVerificationCurrentWindow()).toString();
     }
 
     public String selectPricingMenuProduct() {
         menuProducts.should(visible).should(clickable);
         actions().moveToElement(menuProducts).perform();
         icoWallet.should(visible).should(clickable).isImage();
-        return icoWallet.execute(new BtnVerificationCurrentWindow()).toString();
+        return icoWallet.execute(new BtnProductVerificationCurrentWindow()).toString();
     }
 
     public String selectDemoMenuProduct() {
         menuProducts.should(visible).should(clickable);
         actions().moveToElement(menuProducts).perform();
         icoDemo.should(visible).should(clickable);
-        return icoDemo.execute(new BtnVerificationNewWindow()).toString();
+        return icoDemo.execute(new BtnProductVerificationNewWindow()).toString();
     }
 
     public String selectChatMenuProduct() {
         menuProducts.should(visible).should(clickable);
         actions().moveToElement(menuProducts).perform();
         icoChat.should(visible).should(clickable);
-        return icoChat.execute(new BtnVerificationNewWindow()).toString();
+        return icoChat.execute(new BtnProductVerificationNewWindow()).toString();
     }
 
 //////////////////////// menu resources
@@ -237,14 +237,14 @@ public class BasePage {
         menuResources.should(visible).should(clickable);
         actions().moveToElement(menuResources).perform();
         icoFAQ.should(visible).should(clickable).shouldHave(image);
-        return icoFAQ.execute(new BtnVerificationNewWindow()).toString();
+        return icoFAQ.execute(new BtnProductVerificationNewWindow()).toString();
     }
 
     public String selectGlossary() {
         menuResources.should(visible).should(clickable);
         actions().moveToElement(menuResources).perform();
         icoGlossary.should(visible).should(clickable).shouldBe(image);
-        return icoGlossary.parent().execute(new BtnVerificationCurrentWindow()).toString();
+        return icoGlossary.parent().execute(new BtnProductVerificationNewWindow()).toString();
     }
 
     public void selectHelpCenter() {
@@ -258,14 +258,14 @@ public class BasePage {
         menuResources.should(visible).should(clickable);
         actions().moveToElement(menuResources).perform();
         icoContactUS.should(visible).should(clickable).shouldBe(image);
-        return icoContactUS.parent().execute(new BtnVerificationNewWindow()).toString();
+        return icoContactUS.parent().execute(new BtnProductVerificationNewWindow()).toString();
     }
 
     public String selectWriteForUs() {
         menuResources.should(visible).should(clickable);
         actions().moveToElement(menuResources).perform();
         icoWriteForUS.should(visible).should(clickable).shouldBe(image);
-        return icoWriteForUS.parent().execute(new BtnVerificationNewWindow()).toString();
+        return icoWriteForUS.parent().execute(new BtnProductVerificationNewWindow()).toString();
     }
 
 
@@ -273,7 +273,7 @@ public class BasePage {
         menuResources.should(visible).should(clickable);
         actions().moveToElement(menuResources).perform();
         icoBlog.should(visible).should(clickable).shouldBe(image);
-        return icoBlog.parent().execute(new BtnVerificationNewWindow()).toString();
+        return icoBlog.parent().execute(new BtnProductVerificationNewWindow()).toString();
     }
 
     public void selecAllVideoTutorials() {
@@ -313,7 +313,7 @@ public class BasePage {
         menuResources.should(visible).should(clickable);
         actions().moveToElement(menuResources).perform();
         linkJoinForFreeMenuResources.should(visible).should(clickable);
-        return linkJoinForFreeMenuResources.execute(new BtnVerificationNewWindow()).toString();
+        return linkJoinForFreeMenuResources.execute(new BtnProductVerificationNewWindow()).toString();
     }
 
 
@@ -383,7 +383,7 @@ public class BasePage {
     }
 
     public String checkFootDictionary() {
-        return checkFooterELsThisWindow(footDictionary, DICTIONARY_URI);
+        return checkFooterELsNewWindow(footDictionary, DICTIONARY_URI);
     }
 
     public String checkFootTutorials() {

@@ -15,7 +15,7 @@ public class BaseTest {
     public void setUp() {
         Configuration.timeout = Duration.ofSeconds(10).toMillis();
         Configuration.baseUrl = "https://myownconference.com";
-//        Configuration.browserSize = "1920x1080";
+        Configuration.browserSize = "1024x768";
         selectBrowser("chrome");
     }
 

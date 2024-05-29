@@ -8,10 +8,9 @@ import com.codeborne.selenide.impl.WebElementSource;
 import javax.annotation.Nullable;
 
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.actions;
-import static com.codeborne.selenide.Selenide.switchTo;
+import static com.codeborne.selenide.Selenide.*;
 
-public class BtnVerificationCurrentWindow implements Command {
+public class BtnProductVerificationCurrentWindow implements Command {
     @Nullable
     @Override
     public Object execute(SelenideElement proxy, WebElementSource webElementSource, @Nullable Object[] objects) {
