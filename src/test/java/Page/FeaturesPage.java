@@ -26,44 +26,44 @@ public class FeaturesPage extends BasePage {
 
     ///////////// block Meet face-to-face
 
-    public SelenideElement btnVirtualConf = $("#w-tabs-1-data-w-tab-0 > img");
-    public SelenideElement btnInstantMeeting = $("#w-tabs-1-data-w-tab-1 > img");
-    public SelenideElement btnPrivateAccess = $("#w-tabs-1-data-w-tab-2 > img");
+    private SelenideElement btnVirtualConf = $("#w-tabs-1-data-w-tab-0 > img");
+    private SelenideElement btnInstantMeeting = $("#w-tabs-1-data-w-tab-1 > img");
+    private SelenideElement btnPrivateAccess = $("#w-tabs-1-data-w-tab-2 > img");
 
     private SelenideElement imgVirtualConf = $x("//img[contains(@src, 'feature-video-conferencing-mode')]");
     private SelenideElement imgInstantMeeting = $x("//img[contains(@src, 'instant-meetings')]");
-    public SelenideElement imgPrivateAccess = $x("//img[contains(@src, 'private-access')]");
+    private SelenideElement imgPrivateAccess = $x("//img[contains(@src, 'private-access')]");
 
     /////////////// block experience
 
-    public SelenideElement btnCustomLayout = $("#w-tabs-2-data-w-tab-0 > img");
-    public SelenideElement btnCustomLanding = $("#w-tabs-2-data-w-tab-1 > img");
-    public SelenideElement btnCustomEmails = $("#w-tabs-2-data-w-tab-2 > img");
+    private SelenideElement btnCustomLayout = $("#w-tabs-2-data-w-tab-0 > img");
+    private SelenideElement btnCustomLanding = $("#w-tabs-2-data-w-tab-1 > img");
+    private SelenideElement btnCustomEmails = $("#w-tabs-2-data-w-tab-2 > img");
 
-    public SelenideElement imgCustomLayout = $x("//img[contains(@src, 'theme-and-layout.png')]");
-    public SelenideElement imgCustomLanding = $x("//img[contains(@src, 'branded-landings.png')]");
-    public SelenideElement imgCustomEmails = $x("//img[contains(@src, 'personalized-emails.png')]");
+    private SelenideElement imgCustomLayout = $x("//img[contains(@src, 'theme-and-layout.png')]");
+    private SelenideElement imgCustomLanding = $x("//img[contains(@src, 'branded-landings.png')]");
+    private SelenideElement imgCustomEmails = $x("//img[contains(@src, 'personalized-emails.png')]");
 
     ////////////// block Robust features
 
-    public SelenideElement btnSlideShare = $("#w-tabs-3-data-w-tab-0 > img");
-    public SelenideElement btnMediaShare = $("#w-tabs-3-data-w-tab-1 > img");
-    public SelenideElement btnScreenShare = $("#w-tabs-3-data-w-tab-2 > img");
-    public SelenideElement btnWhiteboard = $("#w-tabs-3-data-w-tab-3 > img");
-    public SelenideElement btnCTA = $("#w-tabs-3-data-w-tab-4 > img");
+    private SelenideElement btnSlideShare = $("#w-tabs-3-data-w-tab-0 > img");
+    private SelenideElement btnMediaShare = $("#w-tabs-3-data-w-tab-1 > img");
+    private SelenideElement btnScreenShare = $("#w-tabs-3-data-w-tab-2 > img");
+    private SelenideElement btnWhiteboard = $("#w-tabs-3-data-w-tab-3 > img");
+    private SelenideElement btnCTA = $("#w-tabs-3-data-w-tab-4 > img");
 
 
-    public SelenideElement imgSlideShare = $x("//img[contains(@src, 'feature-presentations-sharing.png')]");
-    public SelenideElement imgMediaShare = $x("//img[contains(@src, 'feature-youtube-vimeo-mp4-player.png')]");
-    public SelenideElement imgScreenShare = $x("//img[contains(@src, 'feature-screen-sharing.png')]");
-    public SelenideElement imgWhiteboard = $x("//img[contains(@src, 'whiteboard.png')]");
-    public SelenideElement imgCTA = $x("//img[contains(@src, 'cta.png')]");
+    private SelenideElement imgSlideShare = $x("//img[contains(@src, 'feature-presentations-sharing.png')]");
+    private SelenideElement imgMediaShare = $x("//img[contains(@src, 'feature-youtube-vimeo-mp4-player.png')]");
+    private SelenideElement imgScreenShare = $x("//img[contains(@src, 'feature-screen-sharing.png')]");
+    private SelenideElement imgWhiteboard = $x("//img[contains(@src, 'whiteboard.png')]");
+    private SelenideElement imgCTA = $x("//img[contains(@src, 'cta.png')]");
 
 
     ////////////// block start now
 
-    public SelenideElement btnGetStarted = $("div[class='text-block-34']");
-    public SelenideElement btnContactSales = $("div[class='text-block-44']");
+    private SelenideElement btnGetStarted = $("div[class='text-block-34']");
+    private SelenideElement btnContactSales = $("div[class='text-block-44']");
 
 
     public static FeaturesPage getInstance() {
@@ -106,7 +106,8 @@ public class FeaturesPage extends BasePage {
         btnCustomEmails.shouldBe(visible).shouldBe(image).parent().click();
         imgCustomEmails.shouldBe(visible).shouldBe(image);
     }
-    public void checkBlockFeatures () {
+
+    public void checkBlockFeatures() {
         btnSlideShare.scrollIntoView(false);
         btnMediaShare.shouldBe(visible).shouldBe(image).parent().click();
         imgMediaShare.shouldBe(visible).shouldBe(image);
@@ -130,6 +131,7 @@ public class FeaturesPage extends BasePage {
         switchTo().window(0);
         return pageTitle;
     }
+
     public String checkBtnContact() {
         btnContactSales.scrollIntoView(false);
         btnContactSales.should(visible).should(clickable).click();
