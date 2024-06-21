@@ -16,9 +16,9 @@ public class PricengTest extends BaseTest {
 
     @Test
     public void testBlockSlider() {
-        assertThat(PricingPage.getInstance().checkSliderPlans500()).contains("500","$960.00", "$100.00");
-        assertThat(PricingPage.getInstance().checkSliderPlans1000()).contains("1000","$2400.00", "$250.00");
         assertThat(PricingPage.getInstance().checkSliderPlans30()).contains("30","$240.00", "$25.00");
+        assertThat(PricingPage.getInstance().checkSliderPlans500()).contains("500","$960.00", "$100.00");
+        assertThat(PricingPage.getInstance().checkSliderPlans1000()).contains("1000+","$2400.00", "$250.00");
 
     }
 }
